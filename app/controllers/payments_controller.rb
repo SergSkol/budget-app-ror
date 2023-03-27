@@ -19,16 +19,27 @@ class PaymentsController < ApplicationController
 
   # POST /payments or /payments.json
   def create
-    @payment = Payment.new(payment_params)
+    p 'DDDDDDDDDDDDDDDDDDDDDDDDDDDD'
+    p params[:group_id]
+    p 'EEEEEEEEEEEEEEEEEEEEEEEEEEEE'
+    # return
 
-    respond_to do |format|
-      if @payment.save
-        format.html { redirect_to payment_url(@payment), notice: 'Payment was successfully created.' }
-        format.json { render :show, status: :created, location: @payment }
+    @user = current_user
+    @payment = Payment.new(payment_params)
+    @payment.author_id = @user.id
+
+    if @payment.save
+      @group_id = params[:group_id]
+      @group_payment = GroupPayment.new(group_id: @group_id, payment_id: @payment.id)
+
+      if @group_payment.save
+        redirect_to group_url(@group_id), notice: 'Payment was successfully created.'
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @payment.errors, status: :unprocessable_entity }
+        render :new, status: :unprocessable_entity
       end
+    else
+      flash[:error] = 'Payment couldn`t be saved'
+      render 'new'
     end
   end
 

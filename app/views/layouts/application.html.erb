@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>On Budget!</title>
+    <title>On Budget</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,23 @@
   </head>
 
   <body>
+    <div>
+      <a href="#">
+        <img class="burger-image"
+          alt="burger menu icon" 
+          src="<%= asset_path('mobile_menu.png') %>">
+      </a>
+    </div>
+
+    <nav>
+      <span>
+        <% if user_signed_in? %> 
+          Logged in as <%= current_user.name %>
+        <% end %>
+      </span>
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-btn" %> 
+    </nav>
+
     <p class="notice" style="color: green"><%= notice %></p>
     <p class="alert" style="color: red"><%= alert %></p>
     <%= yield %>

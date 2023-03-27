@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :groups
-  resources :payments do
-    resources :group_payments
+  resources :groups, only: [:index, :new, :create, :show, :destroy, :edit, :update] do
+    resources :payments, only: [:index, :new, :create, :show, :destroy, :edit]
   end
-
-  # root 'home#index'
 
   devise_scope :user do
     unauthenticated do

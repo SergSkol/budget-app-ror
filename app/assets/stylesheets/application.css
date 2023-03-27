@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  font-family: proxima-nova, sans-serif;
+}
+
+.group-item {
+  display: flex;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.group-image {
+  height: 64px;
+}
