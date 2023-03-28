@@ -1,5 +1,8 @@
-<%= link_to "Back to categories", groups_path %>
+<%= link_to "<<<", groups_path %>
 <% if can? :read, @group %>
+  <%= link_to "Edit this category", edit_group_path(@group) %> |
+  <%= button_to "Destroy this category", @group, method: :delete %>
+  
   <%= render @group %>
 
   <div class="payments-container">
@@ -15,8 +18,5 @@
 
   <div>
     <%= button_to "Add transaction", new_group_payment_path(@group.id), method: :get %>
-    <%= link_to "Edit this category", edit_group_path(@group) %> |
-
-    <%= button_to "Destroy this category", @group, method: :delete %>
   </div>
 <%end%>

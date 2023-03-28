@@ -1,27 +1,36 @@
-<div>
-  <a href="#">
-    <img class="burger-image"
-      alt="burger menu icon" 
-      src="<%= asset_path('mobile_menu.png') %>">
-  </a>
-  <h1>Categories</h1>
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag "menu.js" %>
+<% end %>
+
+<div class="group-header">
+  <nav class="group-navbar">
+    <a href="#">
+      <img class="burger-image"
+        alt="burger menu icon"
+        onclick="showMenu()"
+        src="<%= asset_path('mobile_menu.png') %>">
+    </a>
+  </nav>
+  <p class="group-title">CATEGORIES</p>
+
+  <nav class="nav-menu hide">
+    <span>
+      <% if user_signed_in? %> 
+        <%= current_user.name %>
+      <% end %>
+    </span>
+    <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-btn" %> 
+  </nav>
 </div>
 
-<nav>
-  <span>
-    <% if user_signed_in? %> 
-      Logged in as <%= current_user.name %>
-    <% end %>
-  </span>
-  <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-btn" %> 
-</nav>
-
-<div id="groups">
+<div class="group-container" id="groups">
   <% @groups.each do |group| %>
-    <%= link_to group_path(group.id) do %>
+    <%= link_to group_path(group.id), class: "group-link" do %>
       <%= render group %>
     <% end %>
   <% end %>
 </div>
 
-<%= link_to "New category", new_group_path, class: "group-btn-new" %>
+<div class="footer">
+  <%= link_to "ADD CATEGORY", new_group_path, class: "btn-bottom" %>
+</div>
