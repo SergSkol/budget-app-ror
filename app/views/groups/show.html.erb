@@ -4,8 +4,12 @@
 
 <div class="payments-container">
   <% @payments.each do |payment| %>
-    <p><%= payment.name %></p>
-    <p><%= payment.amount %></p>
+    <%= link_to group_payment_path(@group.id, payment.id) do %>
+      <div class="payments-item">
+        <p><%= payment.name %></p>
+        <p>$<%= payment.amount %></p>
+      </div>
+    <% end %> 
   <% end %> 
 </div>
 
