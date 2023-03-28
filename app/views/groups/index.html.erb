@@ -15,7 +15,7 @@
           <%= current_user.name %>
         <% end %>
       </span class="std-color">
-      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn-signout" %> 
+      <%= button_to "SIGN OUT", destroy_user_session_path, method: :delete, class: "btn-signout" %> 
     </div>
   </nav>
 
@@ -27,7 +27,7 @@
           onclick="showMenu()"
           src="<%= asset_path('hamburger-icon.png') %>">
       </nav>
-      <p class="group-title">CATEGORIES</p>
+      <p class="header-title">CATEGORIES</p>
     </div>
 
     <div class="group-container" id="groups">

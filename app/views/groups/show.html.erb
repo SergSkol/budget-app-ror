@@ -1,7 +1,7 @@
 <nav class="group-header"> 
-  <%= link_to "<<<", groups_path %>
-  <%= link_to "Edit this category", edit_group_path(@group) %> |
-  <%= button_to "Destroy this category", @group, method: :delete %>
+  <%= link_to "BACK", groups_path, class: "link-header" %>
+  <%= link_to "EDIT", edit_group_path(@group), class: "link-header" %>
+  <%= button_to "REMOVE", @group, method: :delete, class: "btn-header" %>
 </nav>
 
 <%= render @group %>
