@@ -2,35 +2,44 @@
   <%= javascript_include_tag "menu.js" %>
 <% end %>
 
-<div class="group-header">
-  <nav class="group-navbar">
-    <a href="#">
-      <img class="burger-image"
-        alt="burger menu icon"
-        onclick="showMenu()"
-        src="<%= asset_path('mobile_menu.png') %>">
-    </a>
-  </nav>
-  <p class="group-title">CATEGORIES</p>
-
+<section class="group">
   <nav class="nav-menu hide">
-    <span>
-      <% if user_signed_in? %> 
-        <%= current_user.name %>
-      <% end %>
-    </span>
-    <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-btn" %> 
+    <div class="nav-menu-details">
+      <span class="std-color">
+        <img class="profile-image"
+        alt="profile menu icon"
+        src="<%= asset_path('profile-icon.png') %>">
+      </span>
+      <span class="std-color">
+        <% if user_signed_in? %> 
+          <%= current_user.name %>
+        <% end %>
+      </span class="std-color">
+      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn-signout" %> 
+    </div>
   </nav>
-</div>
 
-<div class="group-container" id="groups">
-  <% @groups.each do |group| %>
-    <%= link_to group_path(group.id), class: "group-link" do %>
-      <%= render group %>
-    <% end %>
-  <% end %>
-</div>
+  <div class="group-index">
+    <div class="group-header">
+      <nav class="group-navbar">
+        <img class="burger-image"
+          alt="burger menu icon"
+          onclick="showMenu()"
+          src="<%= asset_path('hamburger-icon.png') %>">
+      </nav>
+      <p class="group-title">CATEGORIES</p>
+    </div>
 
-<div class="footer">
-  <%= link_to "ADD CATEGORY", new_group_path, class: "btn-bottom" %>
-</div>
+    <div class="group-container" id="groups">
+      <% @groups.each do |group| %>
+        <%= link_to group_path(group.id), class: "group-link" do %>
+          <%= render group %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="footer">
+      <%= link_to "ADD CATEGORY", new_group_path, class: "btn-bottom" %>
+    </div>
+  </div>
+</section>

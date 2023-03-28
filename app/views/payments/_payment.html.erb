@@ -5,8 +5,18 @@
   </p>
 
   <p>
-    <strong>Amount:</strong>
-    <%= payment.amount %>
+    <strong>Transaction #</strong>
+    <%= payment.id %>
+  </p>
+
+  <p>
+    <strong></strong>
+    <%= payment.created_at %>
+  </p>
+
+  <p>
+    <strong>Total payment:</strong>
+    $<%= payment.amount %>
   </p>
 
 </div>

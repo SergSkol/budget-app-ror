@@ -1,22 +1,25 @@
-<%= link_to "<<<", groups_path %>
-<% if can? :read, @group %>
+<nav class="group-header"> 
+  <%= link_to "<<<", groups_path %>
   <%= link_to "Edit this category", edit_group_path(@group) %> |
   <%= button_to "Destroy this category", @group, method: :delete %>
-  
-  <%= render @group %>
+</nav>
 
-  <div class="payments-container">
-    <% @payments.each do |payment| %>
-      <%= link_to group_payment_path(@group.id, payment.id) do %>
-        <div class="payments-item">
+<%= render @group %>
+
+<div class="payments-container">
+  <% @payments.each do |payment| %>
+    <%= link_to group_payment_path(@group.id, payment.id), class: "group-link" do %>
+      <div class="payments-item">
+        <div class="payment-info">
           <p><%= payment.name %></p>
-          <p>$<%= payment.amount %></p>
+          <p><%= payment.created_at %></p>
         </div>
-      <% end %> 
+        <p>$<%= payment.amount %></p>
+      </div>
     <% end %> 
-  </div>
+  <% end %> 
+</div>
 
-  <div>
-    <%= button_to "Add transaction", new_group_payment_path(@group.id), method: :get %>
-  </div>
-<%end%>
+<div>
+  <%= button_to "ADD TRANSACTION", new_group_payment_path(@group.id), method: :get, class: "btn-bottom" %>
+</div>

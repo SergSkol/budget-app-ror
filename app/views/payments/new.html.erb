@@ -1,9 +1,7 @@
+<nav class="group-header"> 
+  <%= link_to "Back to category", group_url(@group_id) %>
+</nav>
+
 <h1>New transaction</h1>
 
 <%= render "form", payment: @payment %>
-
-<br>
-
-<div>
-  <%= link_to "Back to category", group_url(@group_id) %>
-</div>

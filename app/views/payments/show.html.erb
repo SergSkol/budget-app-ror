@@ -1,8 +1,8 @@
-<%= link_to "Back to transaction", group_path(@group) %>
+<nav class="group-header"> 
+  <%= link_to "Back to transactions", group_path(@group) %>
+  <%# <%= link_to "Edit this transaction", edit_group_payment_path(@group, @payment) %>
+  <%= button_to "Destroy this transaction", @group_payment, method: :delete %>
+</nav>
+
 <%= render @payment %>
 
-<div>
-  <%= link_to "Edit this transaction", edit_group_payment_path(@group, @payment) %> |
-
-  <%= button_to "Destroy this transaction", @group_payment, method: :delete %>
-</div>

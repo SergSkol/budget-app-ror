@@ -68,11 +68,61 @@
   padding: 10px;
 }
 
+.group {
+  display: flex;
+}
+
 .group-header {
   display: flex;
   align-items: center;
   width: 100%;
   background-color: #3778c2;
+}
+
+.group-navbar {
+  background-color: #3778c2;
+}
+
+.nav-bar {
+  background-color: #3778c2;
+  color: white;
+  font-size: 32px;
+}
+
+.nav-menu {
+  background-color: #3778c2;
+  width: 30%;
+  text-align: center;
+  transition: all 1s ease-in-out;
+}
+
+.nav-menu-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.std-color {
+  background-color: #3778c2;
+  color: white;
+  padding: 16px;
+}
+
+.btn-signout {
+  width: 100%;
+  border: none;
+}
+
+.profile-image {
+  background-color: #3778c2;
+  color: white;
+  height: 64px;
+  padding: 16px;
+}
+
+.burger-image {
+  background-color: #3778c2;
+  color: white;
+  height: 32px;
 }
 
 .group-title {
@@ -120,6 +170,14 @@
   text-align: center;
   padding: 10px;
   background-color: #5fb523;
+  border: none;
+}
+
+.btn-bottom input {
+  background-color: #5fb523;
+  color: white;
+  border: none;
+  font-size: 32px;
 }
 
 .group-container {
@@ -128,6 +186,9 @@
 
 .payments-item {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   margin: 8px;
+  padding: 12px;
 }
