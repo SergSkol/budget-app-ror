@@ -1,12 +1,23 @@
-<div id="<%= dom_id payment %>">
+<div class="payment-row" id="<%= dom_id payment %>">
+  <br>
   <p>
     <strong>Name:</strong>
     <%= payment.name %>
   </p>
 
   <p>
-    <strong>Amount:</strong>
-    <%= payment.amount %>
+    <strong>Transaction #</strong>
+    <%= payment.id %>
+  </p>
+
+  <p>
+    <strong></strong>
+    <%= payment.created_at %>
+  </p>
+
+  <p>
+    <strong>TOTAL PAYMENT:</strong>
+    $<%= payment.amount %>
   </p>
 
 </div>

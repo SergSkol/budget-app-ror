@@ -8,26 +8,12 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+
+    <%= javascript_include_tag "application" %>
+    <%= yield :javascript_includes %>
   </head>
 
   <body>
-    <div>
-      <a href="#">
-        <img class="burger-image"
-          alt="burger menu icon" 
-          src="<%= asset_path('mobile_menu.png') %>">
-      </a>
-    </div>
-
-    <nav>
-      <span>
-        <% if user_signed_in? %> 
-          Logged in as <%= current_user.name %>
-        <% end %>
-      </span>
-      <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "nav-btn" %> 
-    </nav>
-
     <p class="notice" style="color: green"><%= notice %></p>
     <p class="alert" style="color: red"><%= alert %></p>
     <%= yield %>

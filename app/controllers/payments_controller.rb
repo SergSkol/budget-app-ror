@@ -1,29 +1,27 @@
 class PaymentsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_payment, only: %i[show edit update destroy]
 
-  # GET /payments or /payments.json
   def index
+    @group_id = params[:group_id]
     @payments = Payment.all
   end
 
-  # GET /payments/1 or /payments/1.json
-  def show; end
+  def show
+    @group = Group.find(params[:group_id])
+  end
 
-  # GET /payments/new
   def new
+    @group_id = params[:group_id]
     @payment = Payment.new
   end
 
-  # GET /payments/1/edit
-  def edit; end
+  def edit
+    @group = Group.find(params[:group_id])
+    @payment = Payment.find(params[:id])
+  end
 
-  # POST /payments or /payments.json
   def create
-    p 'DDDDDDDDDDDDDDDDDDDDDDDDDDDD'
-    p params[:group_id]
-    p 'EEEEEEEEEEEEEEEEEEEEEEEEEEEE'
-    # return
-
     @user = current_user
     @payment = Payment.new(payment_params)
     @payment.author_id = @user.id
@@ -35,16 +33,20 @@ class PaymentsController < ApplicationController
       if @group_payment.save
         redirect_to group_url(@group_id), notice: 'Payment was successfully created.'
       else
-        render :new, status: :unprocessable_entity
+        flash[:alert] = 'Group payment couldn`t be saved'
+        redirect_to new_group_payment_url(@group_id)
       end
     else
-      flash[:error] = 'Payment couldn`t be saved'
-      render 'new'
+      flash[:alert] = 'Transaction couldn`t be saved, please check name and amount'
+      @group_id = params[:group_id]
+      redirect_to new_group_payment_url(@group_id)
     end
   end
 
-  # PATCH/PUT /payments/1 or /payments/1.json
   def update
+    @group = Group.find(params[:group_id])
+    @payment = Payment.find(params[:id])
+
     respond_to do |format|
       if @payment.update(payment_params)
         format.html { redirect_to payment_url(@payment), notice: 'Payment was successfully updated.' }
@@ -56,24 +58,22 @@ class PaymentsController < ApplicationController
     end
   end
 
-  # DELETE /payments/1 or /payments/1.json
   def destroy
+    @group = Group.find(params[:group_id])
     @payment.destroy
 
     respond_to do |format|
-      format.html { redirect_to payments_url, notice: 'Payment was successfully destroyed.' }
+      format.html { redirect_to group_url(@group), notice: 'Transaction was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_payment
     @payment = Payment.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def payment_params
     params.require(:payment).permit(:name, :amount)
   end

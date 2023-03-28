@@ -1,11 +1,45 @@
-<h1>Categories</h1>
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag "menu.js" %>
+<% end %>
 
-<div id="groups">
-  <% @groups.each do |group| %>
-    <%= link_to group_path(group.id) do %>
-      <%= render group %>
-    <% end %>
-  <% end %>
-</div>
+<section class="group">
+  <nav class="nav-menu hide">
+    <div class="nav-menu-details">
+      <span class="std-color">
+        <img class="profile-image"
+        alt="profile menu icon"
+        src="<%= asset_path('profile-icon.png') %>">
+      </span>
+      <span class="std-color">
+        <% if user_signed_in? %> 
+          <%= current_user.name %>
+        <% end %>
+      </span class="std-color">
+      <%= button_to "SIGN OUT", destroy_user_session_path, method: :delete, class: "btn-signout" %> 
+    </div>
+  </nav>
 
-<%= link_to "New category", new_group_path %>
+  <div class="group-index">
+    <div class="group-header">
+      <nav class="group-navbar">
+        <img class="burger-image"
+          alt="burger menu icon"
+          onclick="showMenu()"
+          src="<%= asset_path('hamburger-icon.png') %>">
+      </nav>
+      <p class="header-title">CATEGORIES</p>
+    </div>
+
+    <div class="group-container" id="groups">
+      <% @groups.each do |group| %>
+        <%= link_to group_path(group.id), class: "group-link" do %>
+          <%= render group %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="footer">
+      <%= link_to "ADD CATEGORY", new_group_path, class: "btn-bottom" %>
+    </div>
+  </div>
+</section>

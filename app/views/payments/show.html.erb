@@ -1,10 +1,8 @@
-<p style="color: green"><%= notice %></p>
+<nav class="group-header"> 
+  <%= link_to "BACK", group_path(@group), class: "link-header" %>
+  <%# <%= link_to "Edit this transaction", edit_group_payment_path(@group, @payment) %>
+  <p class="header-title">Details</p>
+  <%= button_to "REMOVE", @group_payment, method: :delete, class: "btn-header" %>
+</nav>
 
 <%= render @payment %>
-
-<div>
-  <%= link_to "Edit this payment", edit_payment_path(@payment) %> |
-  <%= link_to "Back to payments", payments_path %>
-
-  <%= button_to "Destroy this payment", @payment, method: :delete %>
-</div>

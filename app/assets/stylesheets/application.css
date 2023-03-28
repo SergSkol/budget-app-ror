@@ -16,13 +16,221 @@
 
 * {
   font-family: proxima-nova, sans-serif;
+  background-color: rgb(241, 243, 242);
+  margin: 0;
+  max-width: 512px;
+}
+
+.hide {
+  display: none;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 90vh;
+}
+
+.splash-title {
+  font-size: 64px;
+  margin-top: 20%;
+}
+
+.splash-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
+}
+
+.splash-btn-login {
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+  width: 90%;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #3778c2;
+}
+
+.splash-btn-signup {
+  text-decoration: none;
+  font-size: 24px;
+  color: #434b54;
+  width: 90%;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.field input {
+  width: 99%;
+  border: 1px solid lightgray;
+  height: 32px;
+}
+
+.group {
+  display: flex;
+}
+
+.group-index {
+  width: 100%;
+}
+
+.group-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #3778c2;
+  justify-content: space-between;
+}
+
+.group-navbar {
+  background-color: #3778c2;
+}
+
+.nav-bar {
+  background-color: #3778c2;
+  color: white;
+  font-size: 32px;
+}
+
+.nav-menu {
+  background-color: #3778c2;
+  width: 30%;
+  text-align: center;
+  transition: all 1s ease-in-out;
+}
+
+.nav-menu-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.std-color {
+  background-color: #3778c2;
+  color: white;
+  padding: 16px;
+}
+
+.btn-signout {
+  font-size: 16px;
+  color: #434b54;
+  width: 100%;
+  border: none;
+}
+
+.profile-image {
+  background-color: #3778c2;
+  color: white;
+  height: 64px;
+  padding: 16px;
+}
+
+.burger-image {
+  background-color: #3778c2;
+  color: white;
+  height: 32px;
+}
+
+.header-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 24px;
+  background-color: #3778c2;
+  color: white;
+}
+
+.group-link {
+  text-decoration: none;
 }
 
 .group-item {
   display: flex;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  margin: 8px 0;
 }
 
 .group-image {
   height: 64px;
+}
+
+.group-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-footer {
+  text-align: center;
+}
+
+.link-footer a {
+  text-decoration: none;
+  color: #434b54;
+  margin: 32px;
+}
+
+.link-header {
+  background-color: #3778c2;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.btn-header {
+  background-color: #3778c2;
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-bottom {
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #5fb523;
+  border: none;
+}
+
+.btn-bottom input {
+  background-color: #5fb523;
+  color: white;
+  border: none;
+  font-size: 24px;
+}
+
+.group-container {
+  margin: 0 0 20px;
+}
+
+.payments-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  margin: 8px;
+  padding: 12px;
+}
+
+.payment-row p {
+  height: 32px;
 }
