@@ -142,7 +142,9 @@ If you like this project please add star!
 
 I would like to thank Microverse for learning.
 Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
-Please follow the link to read [The Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/). 
+Please follow the link to read [The Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/).
+
+Icons were provided by [Justicon](https://www.flaticon.com/authors/justicon)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

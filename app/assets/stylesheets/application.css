@@ -145,7 +145,10 @@
   background-color: #3778c2;
   color: white;
   height: 64px;
-  padding: 16px;
+  padding: 8px;
+  margin: 16px 0;
+  border: 3px solid white;
+  border-radius: 50%;
 }
 
 .burger-image {
@@ -259,4 +262,8 @@
 
 .payment-row p {
   height: 32px;
+}
+
+.pleaseholder {
+  margin: 64px;
 }
