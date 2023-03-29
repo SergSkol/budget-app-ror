@@ -7,8 +7,12 @@
     - [Preview](#preview)
     - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
   - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#runtests)
+  - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -73,14 +77,14 @@
 
 To get a local copy up and running, follow these steps.
 
-### Prerequisites
+### Prerequisites <a name="prerequisites"></a>
 
 In order to run this project you need:
 
 - Install ruby on your computer or run in with docker
 - Have rails installed on your computer
 
-### Setup
+### Setup <a name="setup"></a>
 
 Clone this repository to your desired folder:
 
@@ -91,7 +95,7 @@ Example commands:
   cd budget-app-ror
 ```
 
-### Install
+### Install <a name="install"></a>
 
 Install this project with:
 
@@ -103,9 +107,27 @@ Example command:
   rails db:create
   rails db:migrate
 ```
-### Usage
+### Usage <a name="usage"></a>
 
 To run the project, execute the following command:
+
+`rails server`
+
+### Run tests <a name="runtests"></a>
+
+To run tests, run the following command:
+
+Example command:
+
+```gem install rails rspec
+  rspec ./spec/models/
+```
+
+### Deployment <a name="deployment"></a>
+
+You can deploy this project on render:
+
+- Follow the steps in this [documentation](https://render.com/docs/deploy-rails) to deploy a rails app.
 
 `rails server`
 
