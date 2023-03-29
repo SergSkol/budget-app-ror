@@ -4,6 +4,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [Preview](#preview)
     - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -52,10 +53,19 @@
 - **Introduce new transactions associated with a category**
 - **See the money spent on each category**
 
+### Preview <a name="preview"></a>
+![image](https://user-images.githubusercontent.com/106581139/228577327-1a8eda93-e2f1-4a0d-8ae6-2db19a5646f0.png)
+![image](https://user-images.githubusercontent.com/106581139/228577519-59e61b72-6052-4a3d-8c95-1aeb6106f6c4.png)
+![image](https://user-images.githubusercontent.com/106581139/228578250-69adae6a-7d19-44f6-a2d4-013c033cf0ee.png)
+![image](https://user-images.githubusercontent.com/106581139/228578357-73710cf5-2fda-4279-8a72-b1b4b72012e8.png)
+![image](https://user-images.githubusercontent.com/106581139/228578585-325151e2-4b8f-4269-be39-35456bc34205.png)
+![image](https://user-images.githubusercontent.com/106581139/228578693-942ac199-6290-438b-bf64-04983d7010e8.png)
+
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo on Render](https://sergskol.github.io)
+- [Live Demo on Render](https://budget-app-ror-szss.onrender.com/)
+- [Video presentation](https://drive.google.com/file/d/1ns4pBh-gGekDHhAaUaM_4pOdxITPDjxY/view?usp=sharing)
 
 <!-- GETTING STARTED -->
 
