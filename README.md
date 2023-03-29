@@ -124,7 +124,7 @@ To run the project, execute the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/SergSkol/budget-app-ror/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
