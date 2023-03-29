@@ -88,8 +88,6 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-Example commands:
-
 ```sh
   git clone git@github.com:sergskol/budget-app-ror.git
   cd budget-app-ror
@@ -98,8 +96,6 @@ Example commands:
 ### Install <a name="install"></a>
 
 Install this project with:
-
-Example command:
 
 ```sh
   cd budget-app-ror
@@ -117,19 +113,14 @@ To run the project, execute the following command:
 
 To run tests, run the following command:
 
-Example command:
-
 ```gem install rails rspec
-  rspec ./spec/models/
+  rspec spec
 ```
 
 ### Deployment <a name="deployment"></a>
 
 You can deploy this project on render:
-
 - Follow the steps in this [documentation](https://render.com/docs/deploy-rails) to deploy a rails app.
-
-`rails server`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
