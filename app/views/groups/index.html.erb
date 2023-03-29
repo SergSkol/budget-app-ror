@@ -3,19 +3,27 @@
 <% end %>
 
 <section class="group">
-  <nav class="nav-menu hide">
+  <nav class="nav-menu">
     <div class="nav-menu-details">
       <span class="std-color">
         <img class="profile-image"
         alt="profile menu icon"
         src="<%= asset_path('profile-icon.png') %>">
       </span>
+
       <span class="std-color">
         <% if user_signed_in? %> 
           <%= current_user.name %>
         <% end %>
       </span class="std-color">
-      <%= button_to "SIGN OUT", destroy_user_session_path, method: :delete, class: "btn-signout" %> 
+      <%= button_to "SIGN OUT", destroy_user_session_path, method: :delete, class: "btn-signout" %>
+
+      <div class="std-color">
+        <p class="nav-menu-row"><strong class="nav-menu-row">Total: $<%= total_user_amount %></strong></p>
+        <% @groups.each do |group| %>
+          <p class="nav-menu-row"><%= group.name%>: <%= (100 * group.total_amount / total_user_amount).round(1) %>%</p>
+        <% end %>
+      </div>
     </div>
   </nav>
 

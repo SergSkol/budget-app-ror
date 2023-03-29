@@ -60,6 +60,7 @@ class PaymentsController < ApplicationController
 
   def destroy
     @group = Group.find(params[:group_id])
+    @payment.group_payments.destroy_all
     @payment.destroy
 
     respond_to do |format|

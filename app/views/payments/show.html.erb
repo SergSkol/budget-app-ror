@@ -1,7 +1,6 @@
 <nav class="group-header"> 
   <%= link_to "BACK", group_path(@group), class: "link-header" %>
-  <%# <%= link_to "Edit this transaction", edit_group_payment_path(@group, @payment) %>
-  <p class="header-title">Details</p>
+  <%= link_to "COPY", edit_group_payment_path(@group, @payment), class: "link-header" %>
   <%= button_to "REMOVE", @group_payment, method: :delete, class: "btn-header" %>
 </nav>
 

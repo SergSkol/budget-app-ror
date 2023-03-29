@@ -46,6 +46,15 @@ class GroupsController < ApplicationController
   end
 
   def destroy
+    payments = []
+    group_payments = @group.group_payments.all
+    group_payments.each do |e|
+      payment = Payment.find_by(id: e.payment_id)
+      payments.push(payment)
+    end
+
+    group_payments.destroy_all
+    payments.each(&:destroy)
     @group.destroy
 
     respond_to do |format|
