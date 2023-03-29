@@ -1,9 +1,7 @@
-<h1>Editing payment</h1>
+<nav class="group-header"> 
+  <%= link_to "BACK", group_path(@group), class: "link-header" %>
+  <p class="header-title">Editing payment</p>
+  <p></p>
+</nav>
 
 <%= render "form", payment: @payment %>
-
-<br>
-
-<div>
-  <%= link_to "Back to payments", group_path(@group) %>
-</div>

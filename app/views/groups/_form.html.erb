@@ -1,3 +1,7 @@
+<% content_for :javascript_includes do %>
+  <%= javascript_include_tag "links.js" %>
+<% end %>
+
 <%= form_with(model: group) do |form| %>
   <% if group.errors.any? %>
     <div style="color: red">
@@ -11,14 +15,22 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+  <div class="field">
+    <%= form.text_field :name, placeholder: "Name" %>
   </div>
 
-  <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
+  <div class="field">
+    <%= form.text_field :icon, placeholder: "Link to icon", class: "icon_link" %>
+  </div>
+
+  <h2> Input the link to icon image, or select the one from below:</h2>
+
+  <div class="group-links">
+    <% icon_links.each do |link| %>
+      <div>
+        <img class="group-image" src="<%= link %>" alt="icon" onclick="selectLink('<%= link %>')"/>
+      </div>
+    <% end %>
   </div>
 
   <div class="btn-bottom">

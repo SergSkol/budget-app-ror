@@ -46,6 +46,8 @@ class GroupsController < ApplicationController
   end
 
   def destroy
+    @group.group_payments.destroy_all
+    @group.payments.destroy_all
     @group.destroy
 
     respond_to do |format|
