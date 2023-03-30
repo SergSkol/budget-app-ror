@@ -16,7 +16,7 @@ Metrics/MethodLength:
   Include:
     - "app/controllers/*"
     - "app/models/*"
-  Max: 100
+  Max: 20
 Metrics/AbcSize:
   Include:
     - "app/controllers/*"
@@ -25,10 +25,8 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  Enabled: true
-  Max: 100
-  AllowedMethods:
-    - my_long_method
+  IgnoredMethods: ['describe']
+  Max: 30
 
 Style/Documentation:
   Enabled: false
@@ -60,5 +58,3 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
-Layout/EndOfLine:
-   Enabled: False

@@ -4,10 +4,15 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [Preview](#preview)
     - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
   - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#runtests)
+  - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -52,10 +57,19 @@
 - **Introduce new transactions associated with a category**
 - **See the money spent on each category**
 
+### Preview <a name="preview"></a>
+![image](https://user-images.githubusercontent.com/106581139/228577327-1a8eda93-e2f1-4a0d-8ae6-2db19a5646f0.png)
+![image](https://user-images.githubusercontent.com/106581139/228577519-59e61b72-6052-4a3d-8c95-1aeb6106f6c4.png)
+![image](https://user-images.githubusercontent.com/106581139/228578250-69adae6a-7d19-44f6-a2d4-013c033cf0ee.png)
+![image](https://user-images.githubusercontent.com/106581139/228578357-73710cf5-2fda-4279-8a72-b1b4b72012e8.png)
+![image](https://user-images.githubusercontent.com/106581139/228578585-325151e2-4b8f-4269-be39-35456bc34205.png)
+![image](https://user-images.githubusercontent.com/106581139/228578693-942ac199-6290-438b-bf64-04983d7010e8.png)
+
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo on Render](https://sergskol.github.io)
+- [Live Demo on Render](https://budget-app-ror-fc01.onrender.com/)
+- [Video presentation](https://drive.google.com/file/d/1ns4pBh-gGekDHhAaUaM_4pOdxITPDjxY/view?usp=sharing)
 
 <!-- GETTING STARTED -->
 
@@ -63,29 +77,25 @@
 
 To get a local copy up and running, follow these steps.
 
-### Prerequisites
+### Prerequisites <a name="prerequisites"></a>
 
 In order to run this project you need:
 
 - Install ruby on your computer or run in with docker
 - Have rails installed on your computer
 
-### Setup
+### Setup <a name="setup"></a>
 
 Clone this repository to your desired folder:
-
-Example commands:
 
 ```sh
   git clone git@github.com:sergskol/budget-app-ror.git
   cd budget-app-ror
 ```
 
-### Install
+### Install <a name="install"></a>
 
 Install this project with:
-
-Example command:
 
 ```sh
   cd budget-app-ror
@@ -93,11 +103,24 @@ Example command:
   rails db:create
   rails db:migrate
 ```
-### Usage
+### Usage <a name="usage"></a>
 
 To run the project, execute the following command:
 
 `rails server`
+
+### Run tests <a name="runtests"></a>
+
+To run tests, run the following command:
+
+```gem install rails rspec
+  rspec spec
+```
+
+### Deployment <a name="deployment"></a>
+
+You can deploy this project on render:
+- Follow the steps in this [documentation](https://render.com/docs/deploy-rails) to deploy a rails app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
