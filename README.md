@@ -68,7 +68,7 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo on Render](https://budget-app-ror-szss.onrender.com/)
+- [Live Demo on Render](https://budget-app-ror-fc01.onrender.com/)
 - [Video presentation](https://drive.google.com/file/d/1ns4pBh-gGekDHhAaUaM_4pOdxITPDjxY/view?usp=sharing)
 
 <!-- GETTING STARTED -->
