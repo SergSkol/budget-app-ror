@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  # devise_for :users
 
   resources :groups, only: [:index, :new, :create, :show, :destroy, :edit, :update] do
     resources :payments, only: [:index, :new, :create, :show, :destroy, :edit, :update]
