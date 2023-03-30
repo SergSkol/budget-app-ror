@@ -2,6 +2,7 @@ databases:
   - name: budget-app-ror
     databaseName: budget_app_ror
     user: budget_app_ror_user
+    plan: free
 
 services:
   - type: web
@@ -16,3 +17,4 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
+    plan: free
